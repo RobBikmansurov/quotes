@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
   <%= stylesheet_link_tag 'application', media: 'all' %>
 </head>
-
 <body>
 <header>
   Вдохновляющие цитаты на все времена. Сейчас вам выпала вот такая:
@@ -17,13 +16,15 @@
   <%= yield %>
 </section>
 <footer>
-  <div class="footer__about">
-    <a href="https://github.com/RobBikmansurov">GitHub</a>
-  </div>
-  <div class="footer__version"></div>
-  <div class="footer__right">
-    <a href="https://www.forbes.ru/forbeslife/dosug/262327-na-vse-vremena-100-vdokhnovlyayushchikh-tsitat">Источник</a>
-  </div>
+  <table width="100%">
+    <td>
+      <a href="https://github.com/RobBikmansurov">GitHub</a>
+    </td>
+    <td>
+      <a href="https://www.forbes.ru/forbeslife/dosug/262327-na-vse-vremena-100-vdokhnovlyayushchikh-tsitat">Источник</a>
+    </td>
+  </table>
 </footer>
+
 </body>
 </html>
