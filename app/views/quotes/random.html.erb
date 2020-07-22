@@ -7,6 +7,7 @@
 </div>
 
 <div class="author">
-    <%= image_tag("Stephen_Covey_2010.jpg", width: "80", alt: @quote.author) %>
-    <%= @quote.author %>
+    <%= image_tag(@quote.author.link, width: "80", alt: @quote.author.name) unless @quote.author.link.empty? %>
+    <%= @quote.author.name %>
+    <br><%=@quote.author.note %>
 </div>

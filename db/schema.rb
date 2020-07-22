@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_21_161231) do
+ActiveRecord::Schema.define(version: 2020_07_22_171725) do
 
-  create_table "quotes", force: :cascade do |t|
-    t.text "text"
-    t.string "author"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table "authors", force: :cascade do |t|
+    t.string "name"
+    t.string "note"
+    t.string "link"
   end
 
+  create_table "quotes", force: :cascade do |t|
+    t.string "text"
+    t.string "author_name"
+    t.integer "author_id", null: false
+    t.index ["author_id"], name: "index_quotes_on_author_id"
+  end
+
+  add_foreign_key "quotes", "authors"
 end
