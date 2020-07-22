@@ -1,0 +1,11 @@
+<div class="button">
+  <%= link_to 'Next quote', random_quotes_path %>
+</div>
+
+<div class="text">
+  <%= @quote.text %>
+</div>
+<div class="author">
+  <%= image_tag("Stephen_Covey_2010.jpg", alt: "asd") %>
+  <%= @quote.author %>
+</div>

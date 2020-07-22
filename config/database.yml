@@ -1,0 +1,20 @@
+default: &default
+  adapter: sqlite3
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 2 } %>
+
+development:
+  <<: *default
+  database: db/development.sqlite
+
+test:
+  <<: *default
+  database: db/test.sqlite
+
+production:
+  <<: *default
+  database: lesson38_production
+  username: lesson38
+  password: <%= ENV['LESSON38_DATABASE_PASSWORD'] %>
