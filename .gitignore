@@ -11,8 +11,6 @@
 /log/*
 /tmp/*
 
-/bin/*
-
 /public/assets
 .byebug_history
 

@@ -7,7 +7,7 @@
 </div>
 
 <div class="author">
-    <%= image_tag(@quote.author.link, width: "80", alt: @quote.author.name) unless @quote.author.link.empty? %>
+    <%= image_tag(@quote.author.link, width: "100", alt: @quote.author.name) unless @quote.author.link.empty? %>
     <%= @quote.author.name %>
     <br><small><%=@quote.author.note %></small>
 </div>
