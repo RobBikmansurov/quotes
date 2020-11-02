@@ -1,24 +1,36 @@
-# README
+# Quotes - test gem oga and sites parsing
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Inspirational quotes for all time.
 
-Things you may want to cover:
+Parsing sites and learning how to deploy Heroku.
 
-* Ruby version
+Learn how to parse sites with gem oga, save results into json/txt and seeds into db.
 
-* System dependencies
+## System dependecies
 
-* Configuration
+* Ruby 2.7.1
+* Rails 6
+* sqlite3 as db 
 
-* Database creation
+## Database initialization
 
-* Database initialization
+```
+bundle exec rails db:migrate
+bundle exec rails db:seed
+```
 
-* How to run the test suite
+## Install and Run
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+git clone git@github.com:RobBikmansurov/quotes.git
+cd quotes
+bundle
+bundle exec rails server
+```
 
-* Deployment instructions
+Now you can access the application with your browser on: `http://localhost:3000`
 
-* ...
+Enjoy!
+
+
+&copy; 2020 [Robert Bikmansurov](https://bikmansurov.ru/)
